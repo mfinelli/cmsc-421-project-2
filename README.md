@@ -1,8 +1,7 @@
 Project 2
 =========
 
-> Scissors cuts paper
->
+> Scissors cuts paper \\
 > Paper covers rock
 >
 > Rock crushes lizard
