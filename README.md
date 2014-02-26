@@ -23,6 +23,5 @@ Project 2
 >
 > Rock crushes scissors
 > 
-> 
-> - [Sheldon Cooper](https://www.youtube.com/watch?v=cSLeBKT7-sM)
+> -- [Sheldon Cooper](https://www.youtube.com/watch?v=cSLeBKT7-sM)
 
