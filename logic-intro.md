@@ -2,6 +2,7 @@ A quick introduction to logic programming in Clojure
 ====================================================
 
 > I think things, and they happen! Fear me, lesser creatures...
+> 
 > --Niftu Cal (Mass Effect 2) 
 
 core.logic
@@ -169,15 +170,16 @@ Example: The natural numbers
 
 However, if you [grok](https://en.wikipedia.org/wiki/Grok) everything in this section, you will find project 2 to be laughably easy.
 
-The [Peano axioms](https://en.wikipedia.org/wiki/Peano_axioms#The_axioms) are set of axioms for the natural numbers.
+The [Peano axioms](https://en.wikipedia.org/wiki/Peano_axioms#The_axioms) are a set of axioms for the natural numbers.
 
 A number is either:
+
 * zero
 * the successor of a number
 
 We'll let zero be represented as :zero and the successor of a number n be represented as \[n\] (a vector containing n). Then, in core.logic:
 
-    (defn nato [n]             ;; natural number relation nato
+    (defn nato [n]             ;; call the relation "nato"
       (conde
         [(== n :zero)]         ;; :zero is a number
         [(fresh [n-1]         
@@ -191,7 +193,7 @@ We'll let zero be represented as :zero and the successor of a number n be repres
 
 We can also define plus axiomatically:
 
-    zero + n = n
+    0 + n = n
     
     n1 + n2 = n3
     ------------
@@ -225,7 +227,7 @@ What's 2 + 2?
                
     ({:x :zero, :y [:zero], :z [[[:zero]]]})
 
-Challenge problem: define mulo (multiplication).
+**Challenge problem**: define mulo (multiplication).
 
 (You will **not** be graded on this. But if you bring me a working definition, I promise to be suitably impressed.)
     
@@ -290,6 +292,6 @@ We can define the parento relation with conde:
         [(== p :michael) (== c :mary)]
         [(== p :michael) (== c :anthony)]))
 
-(Not that it is possible to do this with less code using [macros](http://clojure.org/macros) and pattern matching, in case you ever wanted to use this in production code. See: [pldb](https://github.com/threatgrid/pldb), but you won't need this project 2.)
+(It is possible to do this with less code using [macros](http://clojure.org/macros) and pattern matching, in case you ever wanted to use this in production code. See: [pldb](https://github.com/threatgrid/pldb), but you won't need this project 2.)
  
 Defining the grandparent and ancestor relations is left as an exercise in project 2.
