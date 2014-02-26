@@ -291,7 +291,5 @@ We can define the parento relation with conde:
         [(== p :vito) (== c :fredo)]
         [(== p :michael) (== c :mary)]
         [(== p :michael) (== c :anthony)]))
-
-(It is possible to do this with less code using [macros](http://clojure.org/macros) and pattern matching, in case you ever wanted to use this in production code. See: [pldb](https://github.com/threatgrid/pldb), but you won't need this project 2.)
  
 Defining the grandparent and ancestor relations is left as an exercise in project 2.
