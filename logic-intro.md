@@ -293,3 +293,35 @@ We can define the parento relation with conde:
         [(== p :michael) (== c :anthony)]))
  
 Defining the grandparent and ancestor relations is left as an exercise in project 2.
+
+Another Prolog to Minikanren example
+------------------------------------
+
+In Prolog:
+
+    p(X) :- q(X), r(X).
+    r(a).
+    q(a).
+    
+    ?- p(a).
+    true.
+    
+In core.logic
+
+    
+    (defn q [x]
+      (== x :a))
+    
+    (defn r [x]
+      (== x :a))
+    
+    (defn p [x] 
+      (all 
+        (q x)
+        (r x)))
+    
+    (run* [x]
+      (p x))
+    ;; => (:a)
+    
+    
