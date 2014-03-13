@@ -83,3 +83,8 @@ Such that a1...d4 is a valid mini-sudoku board.
 **Note: for performance reasons, do not use the (membero) relation.**
 
 Hint: logic-intro.md has a list of useful relations included with core.logic
+
+Submission
+----------
+
+Name your file lastname\_project2.clj and push to submit server (submit.cs.umd.edu)
