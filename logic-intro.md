@@ -299,12 +299,12 @@ Another Prolog to Minikanren example
 
 In Prolog:
 
-    p(X) :- q(X), r(X).
     r(a).
     q(a).
+    p(X) :- q(X), r(X).
     
-    ?- p(a).
-    true.
+    ?- p(X).
+    X = a.
     
 In core.logic
 
