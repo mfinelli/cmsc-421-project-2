@@ -87,4 +87,4 @@ Hint: logic-intro.md has a list of useful relations included with core.logic
 Submission
 ----------
 
-Name your file lastname\_project2.clj and push to submit server (submit.cs.umd.edu)
+Name your file lastname\_project2.clj and push it (and *only* it) to submit server (submit.cs.umd.edu)
