@@ -20,6 +20,7 @@ Write a *function* (family-data person) which returns the following map:
      :grandchildren [collection of all grandchildren of person]}
 
 This function should use core.logic and the relations you have defined. You will receive no points if you 'hard-code' the solution.
+(Some of the tests will rebind parento to a different genealogy, so the relations you write should work *in general*.)
 
 Part II
 -------
