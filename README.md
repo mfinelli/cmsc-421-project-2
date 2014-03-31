@@ -72,6 +72,9 @@ Mini-sudoku is sudoku played on a 4 by 4 board, instead of a 9 by 9 board. The g
 
 Such that :a :b :c :d appear exactly once in every row, column and 2 by 2 sub-board.
 
+**EDIT (3/30) A clarification: Only the sub-boards seperated by actual lines above should be constrained to have :a :b :c :d appear exactly once.
+E.g. a4 b4 a3 b3 IS a "2 by 2 sub-board". a3 b3 a2 b2 is NOT a "2 by 2 sub-board".**
+
 Code the relation:
 
     (sudokuo a4 b4 c4 d4
