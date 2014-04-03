@@ -14,7 +14,8 @@
 (defn grandparento
   "A relation where gp is the grandparent of gc."
   [gp gc]
-  nil)
+  (run* [q]
+    (parento q gc) (parento gp q)))
 
 (defn ancestoro
   "A relation where a is the ancestor of b."
