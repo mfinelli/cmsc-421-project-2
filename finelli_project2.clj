@@ -63,8 +63,10 @@
   that start and end with gesture. e.g. [:spock :scissors :paper :spock]."
   [gesture]
   (run* [q p r s]
-      (== q gesture)
-      (== q s)
+      (== q gesture) ;; here we unify q with gesture so that it's included in
+                     ;; our final list
+      (== q s) ;; then we unify s with gesture (q) so that the last item in the
+               ;; list is also the right gesture
       (rpslso q p)
       (rpslso p r)
       (rpslso r s)))
