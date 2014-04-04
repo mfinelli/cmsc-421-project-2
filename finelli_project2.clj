@@ -82,14 +82,14 @@
    a2 b2 c2 d2
    a1 b1 c1 d1]
   (all
-     (permuteo [a4 b4 c4 d4] symbols) ;; one in every row (1: topmost)
-     (permuteo [a3 b3 c3 d3] symbols) ;; one in every row (2: middle top)
-     (permuteo [a2 b2 c2 d2] symbols) ;; one in every row (3: middle bottom)
-     (permuteo [a1 b1 c1 d1] symbols) ;; one in every row (4: bottommost)
-     (distincto [a4 a3 a2 a1])        ;; one in every column (1: far left)
-     (distincto [b4 b3 b2 b1])        ;; one in every column (2: center left)
-     (distincto [c4 c3 c2 c1])        ;; one in every column (3: center right)
-     (distincto [d4 d3 d2 d1])        ;; one in every column (4: far right)
+     (permuteo [a4 b4 c4 d4] symbols) ;; one in every row (4: topmost)
+     (permuteo [a3 b3 c3 d3] symbols) ;; one in every row (3: middle top)
+     (permuteo [a2 b2 c2 d2] symbols) ;; one in every row (2: middle bottom)
+     (permuteo [a1 b1 c1 d1] symbols) ;; one in every row (1: bottommost)
+     (distincto [a4 a3 a2 a1])        ;; one in every column (a: far left)
+     (distincto [b4 b3 b2 b1])        ;; one in every column (b: center left)
+     (distincto [c4 c3 c2 c1])        ;; one in every column (c: center right)
+     (distincto [d4 d3 d2 d1])        ;; one in every column (d: far right)
      (distincto [a4 b4 a3 b3])        ;; one in every sub-board (top left)
      (distincto [c4 d4 c3 d3])        ;; one in every sub-board (top right)
      (distincto [a2 b2 a1 b1])        ;; one in every sub-board (bottom left)
