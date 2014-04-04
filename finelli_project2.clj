@@ -81,7 +81,19 @@
    a3 b3 c3 d3
    a2 b2 c2 d2
    a1 b1 c1 d1]
-  nil)
+  (all
+     (permuteo [a4 b4 c4 d4] symbols) ;; one in every row (1)
+     (permuteo [a3 b3 c3 d3] symbols) ;; one in every row (2)
+     (permuteo [a2 b2 c2 d2] symbols) ;; one in every row (3)
+     (permuteo [a1 b1 c1 d1] symbols) ;; one in every row (4)
+     (distincto [a4 a3 a2 a1])        ;; one in every column (1)
+     (distincto [b4 b3 b2 b1])        ;; one in every column (2)
+     (distincto [c4 c3 c2 c1])        ;; one in every column (3)
+     (distincto [d4 d3 d2 d1])        ;; one in every column (4)
+     (distincto [a4 b4 a3 b3])        ;; one in every sub-board (top left)
+     (distincto [c4 d4 c3 d3])        ;; one in every sub-board (top right)
+     (distincto [a2 b2 a1 b1])        ;; one in every sub-board (bottom left)
+     (distincto [c2 d2 c1 d1])))      ;; one in every sub-board (bottom right)
 
 (defn print-sudoku
   "Print n solutions to mini-sudoku. (Use to test your sudokuo relation.)"
