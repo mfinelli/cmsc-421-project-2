@@ -20,7 +20,10 @@
 (defn ancestoro
   "A relation where a is the ancestor of b."
   [a b]
-  nil)
+  (run* [q]
+    (conde
+      [(parento a b)]
+      [(parento a q) (parento q b)])))
 
 (defn family-data
   "Return a map of information about person.
