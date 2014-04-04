@@ -41,7 +41,18 @@
   This can be done with (conde), but (matche) may save you some typing:
   https://github.com/frenchy64/Logic-Starter/wiki#wiki-matche"
   [p1 p2]
-  nil)
+  (conde
+    [(== p1 :scissors) (== p2 :paper)]  ;; scissors cuts paper
+    [(== p1 :paper) (== p2 :rock)]      ;; paper covers rock
+    [(== p1 :rock) (== p2 :lizard)]     ;; rock crushes lizard
+    [(== p1 :lizard) (== p2 :spock)]    ;; lizard poisons spock
+    [(== p1 :spock) (== p2 :scissors)]  ;; spock smashes scissors
+    [(== p1 :scissors) (== p2 :lizard)] ;; scissors decapitates lizard
+    [(== p1 :lizard) (== p2 :paper)]    ;; lizard eats paper
+    [(== p1 :paper) (== p2 :spock)]     ;; paper disproves spock
+    [(== p1 :spock) (== p2 :rock)]      ;; spock vaporizes rock
+                                        ;; and as it always has...
+    [(== p1 :rock) (== p2 :scissors)])) ;; rock crushes scissors
 
 (defn sub-triangle
   "Return a collection of vectors of length 4, each a chain of winning moves
