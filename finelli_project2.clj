@@ -31,7 +31,10 @@
   The keys are :ancestors, :descendants, :grandparents, :grandchildren.
   The values are all collections."
   [person]
-  {:ancestors [], :descendants [], :grandparents [], :grandchildren []})
+  {:ancestors [(vec (run* [q] (ancestoro q person)))], 
+   :descendants [(vec (run* [q] (ancestoro person q)))], 
+   :grandparents [(vec (run* [q] (grandparento q person)))], 
+   :grandchildren [(vec (run* [q] (grandparento person q)))]})
 
 (defn rpslso
   "A relation where p1 beats p2 in rock-paper-scissors-lizard-spock.
