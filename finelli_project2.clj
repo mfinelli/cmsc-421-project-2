@@ -58,7 +58,12 @@
   "Return a collection of vectors of length 4, each a chain of winning moves
   that start and end with gesture. e.g. [:spock :scissors :paper :spock]."
   [gesture]
-  nil)
+  (run* [q p r s]
+      (== q gesture)
+      (== q s)
+      (rpslso q p)
+      (rpslso p r)
+      (rpslso r s)))
 
 (def symbols 
   "Legal sudoku symbols."
