@@ -1,3 +1,7 @@
+;; Mario Finelli
+;; CMSC 421 - Section 0201
+;; Project 2 (due 10 April 2014)
+
 (use 'clojure.core.logic)
 
 (defn parento
