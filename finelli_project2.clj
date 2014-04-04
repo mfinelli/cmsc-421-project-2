@@ -14,13 +14,14 @@
 (defn grandparento
   "A relation where gp is the grandparent of gc."
   [gp gc]
-  (run* [q]
-    (parento q gc) (parento gp q)))
+  (fresh [q]
+    (parento q gc)
+    (parento gp q)))
 
 (defn ancestoro
   "A relation where a is the ancestor of b."
   [a b]
-  (run* [q]
+  (fresh [q]
     (conde
       [(parento a b)]
       [(parento a q) (parento q b)])))
