@@ -14,7 +14,7 @@
     [(== p :vito) (== c :fredo)]
     [(== p :michael) (== c :mary)]
     [(== p :michael) (== c :anthony)]))
-    
+
 (defn grandparento
   "A relation where gp is the grandparent of gc."
   [gp gc]
@@ -35,9 +35,9 @@
   The keys are :ancestors, :descendants, :grandparents, :grandchildren.
   The values are all collections."
   [person]
-  {:ancestors (vec (run* [q] (ancestoro q person))), 
-   :descendants (vec (run* [q] (ancestoro person q))), 
-   :grandparents (vec (run* [q] (grandparento q person))), 
+  {:ancestors (vec (run* [q] (ancestoro q person))),
+   :descendants (vec (run* [q] (ancestoro person q))),
+   :grandparents (vec (run* [q] (grandparento q person))),
    :grandchildren (vec (run* [q] (grandparento person q)))})
 
 (defn rpslso
@@ -71,7 +71,7 @@
       (rpslso p r)
       (rpslso r s)))
 
-(def symbols 
+(def symbols
   "Legal sudoku symbols."
   [:a :b :c :d])
 
